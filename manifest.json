@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "BarrelScout",
+    "version": "1.0",
+    "description": "🔍 BarrelScout – Your Smart Whisky & Wine Price Companion BarrelScout helps you discover better bottle deals while you browse your favorite retail sites. It automatically identifies whisky and wine listings, compares them with BAXUS marketplace prices, and shows you potential savings — all in a clean, non-intrusive popup. Sip smarter, save more.",
+    "permissions": ["storage", "tabs","scripting"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+    "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }
+],
+    "host_permissions": [
+  "<all_urls>"
+]
+  }
+  

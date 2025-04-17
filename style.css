@@ -1,0 +1,292 @@
+/* Enhanced UI styling for Bottle Scraper Extension */
+
+/* Base styles */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    width: 380px;
+    color: #212529;
+    border-radius: 8px;
+  }
+  
+  /* Header area with gradient background */
+  .header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    margin: -20px -20px 20px -20px;
+    padding: 25px 20px;
+    border-radius: 8px 8px 0 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(106, 17, 203, 0.15);
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .header p {
+    margin: 8px 0 0 0;
+    opacity: 0.9;
+    font-size: 13px;
+  }
+  
+  /* Button styling */
+  #fetchUrlButton {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37, 117, 252, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #fetchUrlButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 117, 252, 0.3);
+  }
+  
+  #fetchUrlButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(37, 117, 252, 0.2);
+  }
+  
+  #fetchUrlButton:disabled {
+    background: linear-gradient(135deg, #a08bc2 0%, #7eaaf7 100%);
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* URL display styling */
+  #urlDisplay {
+    margin: 20px 0;
+    padding: 12px 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #212529;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-left: 4px solid #2575fc;
+    line-height: 1.5;
+  }
+  
+  /* Results container */
+  #results {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
+    scroll-behavior: smooth;
+  }
+  
+  #results::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  #results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  #results::-webkit-scrollbar-thumb {
+    background: #c7d2fe;
+    border-radius: 8px;
+  }
+  
+  #results::-webkit-scrollbar-thumb:hover {
+    background: #a5b4fc;
+  }
+  
+  /* Result items */
+  .resultItem {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: all 0.25s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .resultItem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  }
+  
+  .resultImage {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  
+  .resultDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .resultDetails strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #212529;
+    line-height: 1.4;
+  }
+  
+  /* Price display */
+  .baxusPrice {
+    color: #10b981;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #ecfdf5;
+    border-radius: 6px;
+  }
+  
+  /* Link styling */
+  .baxusLink {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2575fc;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #e8f0fe;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+  }
+  
+  .baxusLink:hover {
+    background-color: #d0e1fd;
+    color: #1a56db;
+  }
+  
+  /* Savings display */
+  .savings {
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  
+  .positive-savings {
+    background-color: #ecfdf5;
+    color: #10b981;
+    border-left: 4px solid #10b981;
+  }
+  
+  .negative-savings {
+    background-color: #fff1f1;
+    color: #ef4444;
+    border-left: 4px solid #ef4444;
+  }
+  
+  /* Comparison header */
+  .comparison-header {
+    margin: 20px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  
+  .comparison-header h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #212529;
+    display: flex;
+    align-items: center;
+  }
+  
+  .comparison-header h3::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%232575fc"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>');
+    background-repeat: no-repeat;
+    margin-right: 8px;
+  }
+  
+  .currency-note {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    color: #6b7280;
+    font-style: italic;
+  }
+  
+  /* Error message */
+  .error-message {
+    padding: 16px;
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    color: #b91c1c;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  
+  /* Loading animation */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  #fetchUrlButton.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%);
+    background-size: 50px 50px;
+    animation: pulse 2s linear infinite;
+    z-index: 1;
+  }
+  
+  /* No results message */
+  .no-results {
+    text-align: center;
+    padding: 30px 20px;
+    color: #6b7280;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 1px dashed #d1d5db;
+  }
+  
+  .no-results::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px auto;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%236b7280"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>');
+    background-repeat: no-repeat;
+}
