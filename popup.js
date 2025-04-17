@@ -9,8 +9,8 @@
 const CONFIG = {
   API_URL: "https://services.baxus.co/api/search/listings?from=0&size=1480&listed=true",
   PRODUCT_URL_BASE: "https://www.baxus.co/asset/",
-  MINIMUM_MATCH_PERCENTAGE: 0.7,
-  MAX_KEYWORDS: 5
+  MINIMUM_MATCH_PERCENTAGE: 0.6,
+  MAX_KEYWORDS: 4
 };
 
 // Common price selectors used across different e-commerce platforms
