@@ -95,9 +95,9 @@ const CONFIG = {
 ## 🧪 Example Sites to Test
 Try these sample whisky/wine e-commerce sites:
 
-[https://www.thewhiskyexchange.com](https://wineonlinedelivery.com/)
+[https://wineonlinedelivery.com/]
 
-[https://www.masterofmalt.com](https://www.wine-searcher.com/)
+[https://www.wine-searcher.com/]
 
 Just click the extension while viewing a product!
 You can try with any link!!
